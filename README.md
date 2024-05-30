@@ -13,7 +13,7 @@ Cette application doit permettre de suivre les livres, les membres de la bibliot
 ** Consignes :
 Classes et Types Primitifs :
 
-Créez une classe Livre avec les attributs suivants :
+Créez une classe classes.Livre avec les attributs suivants :
 - titre (String)
 - auteur (String)
 - idbook (String)
@@ -21,11 +21,11 @@ Créez une classe Livre avec les attributs suivants :
 
 ** Héritage :
 
-Créez une classe Membre avec les attributs :
+Créez une classe classes.Membre avec les attributs :
 - nom (String)
 - prenom (String)
 - id (int)
-Créez une classe Etudiant qui hérite de Membre et ajoute l'attribut :
+Créez une classe Etudiant qui hérite de classes.Membre et ajoute l'attribut :
 - niveau (String)
-Créez une classe Professeur qui hérite de Membre et ajoute l'attribut :
+Créez une classe classes.Professeur qui hérite de classes.Membre et ajoute l'attribut :
 departement (String)
