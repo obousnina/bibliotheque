@@ -1,4 +1,4 @@
-# bibliotheque
+# Bibliotheque
 ** Contexte :
 
 Développer une application simple pour gérer une bibliothèque. 
