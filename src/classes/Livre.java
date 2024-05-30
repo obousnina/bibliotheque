@@ -1,12 +1,14 @@
 package classes;
 
-public class Livre {
+import interfaces.Empruntable;
+
+public class Livre implements Empruntable {
     private String titre;
     private String auteur;
-    private String idBook;
+    private int idBook;
     private boolean disponible;
     //constructor
-    public Livre(String titre, String auteur, String idBook, boolean disponible) {
+    public Livre(String titre, String auteur, int idBook, boolean disponible) {
         this.titre = titre;
         this.auteur = auteur;
         this.idBook = idBook;
@@ -19,7 +21,7 @@ public class Livre {
     public String getAuteur() {
         return auteur;
     }
-    public String getIdBook() {
+    public int getIdBook() {
         return idBook;
     }
     public boolean isDisponible() {
@@ -28,5 +30,19 @@ public class Livre {
     //setter
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    @Override
+    public void emprunter() {
+        this.setDisponible(false);
+        System.out.println("le livre est emprunté, ");
+        System.out.println("disponibilité du livre : "+ this.disponible);
+    }
+
+    @Override
+    public void rendre() {
+        this.setDisponible(true);
+        System.out.println("le livre est rendu, ");
+        System.out.println("disponibilité du livre : "+ this.disponible);
     }
 }
