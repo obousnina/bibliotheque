@@ -56,3 +56,9 @@ Ajoutez l'attribut `categorie` à la classe `Livre`.
 ### Exception
 
 Créez une exception personnalisée `LivreNonDisponibleException` qui sera lancée lorsque quelqu'un essaie d'emprunter un livre déjà emprunté. Modifiez la méthode `emprunter()` dans la classe `Livre` pour lancer cette exception si le livre est déjà emprunté.
+
+### Programme Principal
+
+1. Créez un programme `main` qui demande à un gestionnaire de construire un catalogue de 10 livres pour la bibliothèque.
+
+2. Ajoutez une deuxième partie où un élève peut réserver un livre de la bibliothèque.
