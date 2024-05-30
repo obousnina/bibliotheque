@@ -1,18 +1,29 @@
 package classes;
 
-public class Livres {
+public class Livres implements Empruntable {
     private String titre;
     private String auteur;
     private String genre;
-    private int id;
+    private int idBook;
     private boolean disponible;
-    public Livres(String titre, String auteur, String genre, int id, boolean disponible) {
+    public Livres(String titre, String auteur, int idBook, String genre, boolean disponible) {
         this.titre = titre;
         this.auteur = auteur;
         this.genre = genre;
-        this.id = id;
+        this.idBook = idBook;
         this.disponible = true;
     }
+
+    @Override
+    public void emprunter() {
+        this.disponible = false;
+    }
+
+    @Override
+    public void rendre() {
+        this.disponible = true;
+    }
+
 
     public String getTitre() {
         return titre;
@@ -38,12 +49,12 @@ public class Livres {
         this.genre = genre;
     }
 
-    public int getId() {
-        return id;
+    public int getIdBook() {
+        return idBook;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdBook(int idBook) {
+        this.idBook = idBook;
     }
 
     public boolean isDisponible() {
@@ -52,6 +63,16 @@ public class Livres {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+    @Override
+    public String toString() {
+        return "Livre{" +
+                "titre='" + titre + '\'' +
+                ", auteur='" + auteur + '\'' +
+                ", idBook=" + idBook +
+                ", genre='" + genre + '\'' +
+                ", disponible=" + disponible +
+                "}\n";
     }
 }
 
