@@ -29,3 +29,11 @@ Créez une classe Etudiant qui hérite de Membre et ajoute l'attribut :
 - niveau (String)
 Créez une classe Professeur qui hérite de Membre et ajoute l'attribut :
 departement (String)
+- 
+- Interface :
+
+Créez une interface Empruntable avec les méthodes suivantes :
+emprunter() : cette méthode doit permettre de marquer un livre comme emprunté.
+rendre() : cette méthode doit permettre de marquer un livre comme disponible.
+Implémentez cette interface dans la classe Livre.
+
