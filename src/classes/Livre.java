@@ -1,6 +1,6 @@
 package classes;
 
-public class Livre {
+public class Livre implements Empruntable {
   String titre;
   String auteur;
   String idbook;
@@ -11,5 +11,13 @@ public class Livre {
     this.auteur = auteur;
     this.idbook = idbook;
     this.disponible = disponible;
+  }
+  
+  public void emprunter() {
+    this.disponible = false;
+  }
+  
+  public void rendre() {
+    this.disponible = true;
   }
 }
