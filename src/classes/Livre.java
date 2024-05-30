@@ -4,17 +4,24 @@ public class Livre implements Empruntable {
   String titre;
   String auteur;
   String idbook;
-  boolean disponible;
+  Categorie categorie;
+  boolean disponible =true;
   
-  public Livre (String titre, String auteur, String idbook, boolean disponible) {
+  public Livre (String titre, String auteur, String idbook, Categorie categorie) {
     this.titre = titre;
     this.auteur = auteur;
     this.idbook = idbook;
-    this.disponible = disponible;
+    this.categorie = categorie;
   }
   
-  public void emprunter() {
+  public String getTitre() {
+    return titre;
+  }
+  
+  public void emprunter() throws LivreNonDisponibleExeption {
+    if (!this.disponible) throw new LivreNonDisponibleExeption("Ce livre est momentanément indisponible");
     this.disponible = false;
+    System.out.println("Vous venez d'emprunter "+this.titre);
   }
   
   public void rendre() {
