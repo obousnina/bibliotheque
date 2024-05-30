@@ -29,3 +29,6 @@ Créez une classe Etudiant qui hérite de Membre et ajoute l'attribut :
 - niveau (String)
 Créez une classe Professeur qui hérite de Membre et ajoute l'attribut :
 departement (String)
+
+
+j'edite pour tester
