@@ -11,7 +11,7 @@ Cette application doit permettre de suivre les livres, les membres de la bibliot
 - Gérer les exceptions.
 
 ** Consignes :
-Classes et Types Primitifs :
+classes et Types Primitifs :
 
 Créez une classe Livre avec les attributs suivants :
 - titre (String)
