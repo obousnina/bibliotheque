@@ -1,9 +1,9 @@
 package classes;
 
-public class Membre {
-    String nom;
-    String prenom;
-    int id;
+public abstract class Membre {
+    private String nom;
+    private String prenom;
+    private int id;
 
     public Membre(String nom, String prenom, int id) {
         this.nom = nom;
