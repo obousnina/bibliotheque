@@ -62,3 +62,5 @@ Créez une exception personnalisée `LivreNonDisponibleException` qui sera lanc�
 1. Créez un programme `main` qui demande à un gestionnaire de construire un catalogue de 10 livres pour la bibliothèque.
 
 2. Ajoutez une deuxième partie où un élève peut réserver un livre de la bibliothèque.
+3. Faite evoluer la saisie de catalogue : Inserer la saisie dans un fichier.
+4. 
