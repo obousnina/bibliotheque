@@ -65,25 +65,70 @@ Créez une exception personnalisée `LivreNonDisponibleException` qui sera lanc�
 
 3. Ajoutez une troisième partie où le catalogue des livres est créé et stocké dans un fichier `catalogue.txt`. L'élève ou le professeur pourra réserver un livre à partir de ce fichier.
 
+### Programme Principal
+
+1. Créez un programme `main` qui demande à un gestionnaire de construire un catalogue de 10 livres pour la bibliothèque. Utilisez la classe `Scanner` pour la saisie des informations.
+
+2. Ajoutez une deuxième partie où un élève ou un professeur peut réserver un livre de la bibliothèque.
+
+3. Ajoutez une troisième partie où le catalogue des livres est créé et stocké dans un fichier `catalogue.txt`. L'élève ou le professeur pourra réserver un livre à partir de ce fichier.
+
 #### Détails des Consignes pour le Point 3:
 
 1. **Création du fichier catalogue.txt**:
-    - Ouvrez un flux de sortie pour écrire dans un fichier nommé `catalogue.txt`.
-    - Parcourez la liste des livres et écrivez chaque livre dans le fichier au format suivant:
+    - Utilisez la classe `FileWriter` pour ouvrir un flux de sortie pour écrire dans un fichier nommé `catalogue.txt`.
+    - Parcourez la liste des livres (par exemple, une `ArrayList<Livre>`) et écrivez chaque livre dans le fichier au format suivant:
       ```
       idbook;titre;auteur;disponible;categorie
       ```
-    - Fermez le flux de sortie après avoir terminé d'écrire tous les livres dans le fichier.
+      Utilisez des points-virgules (`;`) pour séparer les attributs.
+    - Exemple:
+      ```java
+      FileWriter writer = new FileWriter("catalogue.txt");
+      for (Livre livre : listeLivres) {
+          writer.write(livre.getIdbook() + ";" + livre.getTitre() + ";" + livre.getAuteur() + ";" + livre.isDisponible() + ";" + livre.getCategorie() + "\n");
+      }
+      writer.close();
+      ```
 
 2. **Lecture du fichier catalogue.txt**:
-    - Ouvrez un flux d'entrée pour lire à partir du fichier `catalogue.txt`.
-    - Lisez chaque ligne du fichier et créez des instances de `Livre` à partir des données lues.
-    - Stockez ces instances dans une collection appropriée (par exemple, une `ArrayList`).
+    - Utilisez la classe `FileReader` et `BufferedReader` pour ouvrir un flux d'entrée pour lire à partir du fichier `catalogue.txt`.
+    - Lisez chaque ligne du fichier avec `BufferedReader.readLine()` et créez des instances de `Livre` à partir des données lues.
+    - Exemple:
+      ```java
+      BufferedReader reader = new BufferedReader(new FileReader("catalogue.txt"));
+      String line;
+      List<Livre> listeLivres = new ArrayList<>();
+      while ((line = reader.readLine()) != null) {
+          String[] parts = line.split(";");
+          Livre livre = new Livre(parts[0], parts[1], parts[2], Boolean.parseBoolean(parts[3]), Categorie.valueOf(parts[4]));
+          listeLivres.add(livre);
+      }
+      reader.close();
+      ```
 
 3. **Réservation d'un livre**:
-    - Affichez la liste des livres disponibles à partir de la collection créée.
-    - Demandez à l'utilisateur (élève ou professeur) de saisir l'`idbook` du livre qu'il souhaite réserver.
+    - Affichez la liste des livres disponibles à partir de la collection créée (par exemple, une `ArrayList<Livre>`).
+    - Utilisez la classe `Scanner` pour demander à l'utilisateur (élève ou professeur) de saisir l'`idbook` du livre qu'il souhaite réserver.
     - Cherchez le livre correspondant dans la collection.
     - Utilisez la méthode `emprunter()` pour marquer le livre comme emprunté, en gérant l'exception `LivreNonDisponibleException` si le livre est déjà emprunté.
-    - Mettez à jour le fichier `catalogue.txt` pour refléter les changements dans la disponibilité des livres.
+    - Exemple:
+      ```java
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Entrez l'ID du livre à réserver :");
+      String idbook = scanner.nextLine();
+      for (Livre livre : listeLivres) {
+          if (livre.getIdbook().equals(idbook)) {
+              try {
+                  livre.emprunter();
+                  System.out.println("Le livre " + livre.getTitre() + " a été réservé.");
+              } catch (LivreNonDisponibleException e) {
+                  System.out.println("Le livre est déjà emprunté.");
+              }
+              break;
+          }
+      }
+      ```
+    - Mettez à jour le fichier `catalogue.txt` pour refléter les changements dans la disponibilité des livres en répétant l'étape de création du fichier.
+
 
