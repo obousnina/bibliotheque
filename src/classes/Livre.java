@@ -6,7 +6,15 @@ public class Livre implements Empruntable{
     private String auteur;
     private String idBook;
     private boolean disponible;
+    public enum Categorie {
+        FICTION,
+        NON_FICTION,
+        SCIENTIFIQUE,
+        HISTOIRE,
+        BIOGRAPHIE,
+    }
 
+    @Override
     public void emprunter (Livre livreEmprunte) {
         this.titre = livreEmprunte.titre;
         this.auteur = livreEmprunte.auteur;
@@ -14,6 +22,7 @@ public class Livre implements Empruntable{
         this.disponible = !this.disponible;
     }
 
+    @Override
     public void rendre (Livre livreRendu) {
         this.titre = livreRendu.titre;
         this.auteur = livreRendu.auteur;
