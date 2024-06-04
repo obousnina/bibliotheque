@@ -28,8 +28,6 @@ public class Livre implements Empruntable {
     }
 
     // Getters and Setters
-
-
     public String getTitre() {
         return titre;
     }
