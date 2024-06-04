@@ -7,7 +7,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        Etudiant constantin = new Etudiant();
+        Etudiant constantin = new Etudiant("HIJ", "Constantin", 1997035, "Débutant");
         System.out.println(constantin); 
     }
 
