@@ -1,7 +1,7 @@
 package classes;
 import interfaces.Empruntable;
 
-public class Livre implements Empruntable{
+public class Livre implements Empruntable {
     private String titre;
     private String auteur;
     private String idBook;
@@ -19,7 +19,6 @@ public class Livre implements Empruntable{
         this.titre = livreEmprunte.titre;
         this.auteur = livreEmprunte.auteur;
         this.idBook = livreEmprunte.idBook;
-        this.disponible = !this.disponible;
     }
 
     @Override
