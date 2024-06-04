@@ -65,13 +65,6 @@ Créez une exception personnalisée `LivreNonDisponibleException` qui sera lanc�
 
 3. Ajoutez une troisième partie où le catalogue des livres est créé et stocké dans un fichier `catalogue.txt`. L'élève ou le professeur pourra réserver un livre à partir de ce fichier.
 
-### Programme Principal
-
-1. Créez un programme `main` qui demande à un gestionnaire de construire un catalogue de 10 livres pour la bibliothèque. Utilisez la classe `Scanner` pour la saisie des informations.
-
-2. Ajoutez une deuxième partie où un élève ou un professeur peut réserver un livre de la bibliothèque.
-
-3. Ajoutez une troisième partie où le catalogue des livres est créé et stocké dans un fichier `catalogue.txt`. L'élève ou le professeur pourra réserver un livre à partir de ce fichier.
 
 #### Détails des Consignes pour le Point 3:
 
