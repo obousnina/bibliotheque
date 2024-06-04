@@ -1,13 +1,13 @@
 import classes.Livre;
+import classes.Membre;
 import enumerations.Categorie;
 import exeption.LivreNonDisponibleException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String... args) throws LivreNonDisponibleException {
-
-        Livre roman = new Livre("arbre", "jacques", 1,false, Categorie.FICTION);
-        roman.emprunter();
-        roman.rendre();
+        Membre Paul = new Membre("Perou", "Paul");
+        Paul.creerCatalogue(10);
     }
 }

@@ -1,6 +1,5 @@
 package classes;
 
-import enumerations.Categorie;
 import exeption.LivreNonDisponibleException;
 import interfaces.Empruntable;
 
@@ -9,9 +8,9 @@ public class Livre implements Empruntable {
     private String auteur;
     private int idBook;
     private boolean disponible;
-    private Categorie categorie;
+    private String categorie;
     //constructor
-    public Livre(String titre, String auteur, int idBook, boolean disponible, Categorie categorie) {
+    public Livre(String titre, String auteur, int idBook, boolean disponible, String categorie) {
         this.titre = titre;
         this.auteur = auteur;
         this.idBook = idBook;
@@ -31,10 +30,20 @@ public class Livre implements Empruntable {
     public boolean isDisponible() {
         return disponible;
     }
-    public Categorie getCategorie() {return categorie;}
+    public String getCategorie() {return categorie;}
     //setter
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    @Override
+    public String toString() {
+        return "Caracteristiques du livre :" +
+                "Titre : " + getTitre() + "\n" +
+                "Auteur : " + getAuteur() + "\n" +
+                "Identifiant : " + getIdBook() + "\n" +
+                "Disponibilité : " + isDisponible() + "\n" +
+                "Catégorie : " + getCategorie();
     }
 
     @Override
