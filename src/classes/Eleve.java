@@ -7,4 +7,22 @@ public class Eleve extends Membre {
         super(nom, prenom, id);
         this.niveau = niveau;
     }
+
+    public String getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(String niveau) {
+        this.niveau = niveau;
+    }
+
+    public String toString() {
+        return "Eleve{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", id='" + id + '\'' +
+                ", niveau=" + niveau +
+                '}';
+    }
 }
+
