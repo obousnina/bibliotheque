@@ -1,5 +1,13 @@
+public enum Categorie {
+    FICTION,
+    NON_FICTION,
+    SCIENTIFIQUE,
+    HISTOIRE,
+    BIOGRAPHIE
+}
+
 public interface Empruntable {
-    void emprunter();
+    void emprunter() throws LivreNonDisponibleException;
     void rendre();
 }
 
@@ -8,13 +16,15 @@ public class Livre implements Empruntable {
     private String auteur;
     private String idbook;
     private boolean disponible;
+    private Categorie categorie;
 
     // Constructeur
-    public Livre(String titre, String auteur, String idbook, boolean disponible) {
+    public Livre(String titre, String auteur, String idbook, boolean disponible, Categorie categorie) {
         this.titre = titre;
         this.auteur = auteur;
         this.idbook = idbook;
         this.disponible = disponible;
+        this.categorie = categorie;
     }
 
     // Getters and Setters
@@ -42,14 +52,30 @@ public class Livre implements Empruntable {
         this.idbook = idbook;
     }
 
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
     // Interface emprunt
     @Override
-    public void emprunter() {
+    public void emprunter() throws LivreNonDisponibleException {
         if (disponible) {
             disponible = false;
             System.out.println("Livre emprunté.");
         } else {
-            System.out.println("Le livre n'est pas disponible.");
+            throw new LivreNonDisponibleException("Le livre n'est pas disponible.");
         }
     }
 
