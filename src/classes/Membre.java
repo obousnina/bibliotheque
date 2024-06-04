@@ -21,7 +21,7 @@ public class Membre {
         return prenom;
     }
     //methode
-    public void creerCatalogue(Integer nombreLivre){
+    public ArrayList <Livre> creerCatalogue(Integer nombreLivre){
         ArrayList <Livre> Catalogue = new ArrayList<>();
         for (int nombre = 1; nombre < nombreLivre+1; nombre++){
             //demande le titre
@@ -45,8 +45,17 @@ public class Membre {
             Livre livre = new Livre(titre, auteur, idBook, disponible, categorie);
             Catalogue.add(livre);
         }
+        System.out.println("Les livres du catalogue :");
         for (Livre livre : Catalogue) {
             System.out.println(livre.toString());
+        }
+        return Catalogue;
+    }
+    public void reserver(Livre leLivre){
+        if (leLivre.isDisponible()){
+            System.out.println("le livre "+ leLivre.toString()+ "\n" + " est disponible");
+            leLivre.setDisponible(false);
+            System.out.println("Vous l'avez reservé");
         }
     }
 }

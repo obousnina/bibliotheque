@@ -38,11 +38,10 @@ public class Livre implements Empruntable {
 
     @Override
     public String toString() {
-        return "Caracteristiques du livre :" +
-                "Titre : " + getTitre() + "\n" +
-                "Auteur : " + getAuteur() + "\n" +
-                "Identifiant : " + getIdBook() + "\n" +
-                "Disponibilité : " + isDisponible() + "\n" +
+        return "Titre : " + getTitre() + ", " +
+                "Auteur : " + getAuteur() + ", " +
+                "Identifiant : " + getIdBook() + ", " +
+                "Disponibilité : " + isDisponible() + ", " +
                 "Catégorie : " + getCategorie();
     }
 
@@ -53,7 +52,7 @@ public class Livre implements Empruntable {
             }
         else {
             System.out.println("Le livre est disponible");
-            this.setDisponible(true);
+            this.setDisponible(false);
             System.out.println("Le livre est donc emprunté");
         }
     }
