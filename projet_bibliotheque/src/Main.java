@@ -1,15 +1,17 @@
 import classes.Livre;
 import enumeration.Categorie;
+import exceptions.LivreNonDisponibleException;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.io.*;
+import java.util.*;
 
 public class Main {
     static Random random = new Random();
 
-    public static void main(String[] args) {
+    public Main() throws IOException {
+    }
+
+    public static void main(String[] args) throws LivreNonDisponibleException, IOException {
 
         List<String> listeTitres = List.of("Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6");
         List<String> listeAuteurs = List.of("Auteur1", "Auteur2", "Auteur3", "Auteur4", "Auteur5", "Auteur6");
@@ -23,7 +25,40 @@ public class Main {
             System.out.println(listeLivres);
         }
 
-    }
+
+        File catalogue = new File("c:/Users/utilisateur/Documents/2024_POEC_EPSI RENNES/catalogue.txt");
+        FileWriter ecrireCatalogue = new FileWriter("catalogue.txt");
+
+        for (Livre livre : listeLivres){
+            ecrireCatalogue.write(livre.getIdbook() + ";" + livre.getTitre() + ";" + livre.getAuteur() + ";" + livre.isDisponible() + ";" + livre.getCategorie() + "\n");
+        }
+        ecrireCatalogue.close();
+
+        BufferedReader lectureCatalogue = new BufferedReader(new FileReader("catalogue.txt"));
+        String ligne;
+        while ((ligne = lectureCatalogue.readLine()) != null) {
+            String[] parts = ligne.split(";");
+            Livre livre = new Livre(parts[0], parts[1], parts[2], Boolean.parseBoolean(parts[3]), Categorie.valueOf(parts[4]));
+            listeLivres.add(livre);
+        }
+        lectureCatalogue.close();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez entrer l'ID du livre à réserver :");
+        String idbook = scanner.nextLine();
+        for (Livre livre : listeLivres) {
+            if (livre.getIdbook().equals(idbook)) {
+                try {
+                    livre.emprunter();
+                    System.out.println("Le livre " + livre.getIdbook() + livre.getTitre() + " a été réservé.");
+                } catch (LivreNonDisponibleException e) {
+                    System.out.println("Le livre est déjà emprunté.");
+                }
+                break;
+            }
+        }
+        }
+
 
     private static Livre getLivre(List<String> listeTitres, List<String> listeAuteurs, List<String> listeIdbook, List<Categorie> listeCategorie) {
         String titreAleatoire = listeTitres.get(random.nextInt(0, listeTitres.toArray().length));
@@ -35,5 +70,6 @@ public class Main {
         return new Livre(titreAleatoire, auteurAleatoire, idbookAleatoire, booleanAleatoire,categorieAleatoire);
 
     }
+
 
 }

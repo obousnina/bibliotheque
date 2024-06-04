@@ -21,13 +21,36 @@ public Livre (String titre, String auteur, String idbook, boolean disponible, Ca
     this.categorie = categorie;
 }
 
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getAuteur() {
+        return auteur;
+    }
+
+    public String getIdbook() {
+        return idbook;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
     //Méthodes
 
-    public void emprunter(){
-    System.out.println("Le livre " +idbook+" n'est plus disponible");
+    public void emprunter() throws LivreNonDisponibleException {
+    if (disponible) {
+        System.out.println("Le livre " + idbook + " est disponible");
+    } else{
+        throw new LivreNonDisponibleException("Le Livre" + idbook+ " n'est plus disponible");
+    }
 }
 
-public void rendre(){
+    public void rendre(){
     boolean disponible=true;
     System.out.println("Le livre est à nouveau disponible");
 }
