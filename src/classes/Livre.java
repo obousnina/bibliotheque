@@ -1,4 +1,9 @@
-public class Livre {
+public interface Empruntable {
+    void emprunter();
+    void rendre();
+}
+
+public class Livre implements Empruntable {
     private String titre;
     private String auteur;
     private String idbook;
@@ -21,4 +26,40 @@ public class Livre {
         this.titre = titre;
     }
 
-    public String get
+    public String getAuteur() {
+        return auteur;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
+    public String getIdbook() {
+        return idbook;
+    }
+
+    public void setIdbook(String idbook) {
+        this.idbook = idbook;
+    }
+
+    // Interface emprunt
+    @Override
+    public void emprunter() {
+        if (disponible) {
+            disponible = false;
+            System.out.println("Livre emprunté.");
+        } else {
+            System.out.println("Le livre n'est pas disponible.");
+        }
+    }
+
+    @Override
+    public void rendre() {
+        if (!disponible) {
+            disponible = true;
+            System.out.println("Livre rendu.");
+        } else {
+            System.out.println("Le livre n'a pas été emprunté.");
+        }
+    }
+}
