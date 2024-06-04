@@ -1,6 +1,8 @@
 package classes;
 
-public class Livre implements Empruntable {
+import java.io.Serializable;
+
+public class Livre implements Empruntable, Serializable {
   String titre;
   String auteur;
   String idbook;

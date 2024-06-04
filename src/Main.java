@@ -2,19 +2,37 @@ import classes.Categorie;
 import classes.Livre;
 import classes.LivreNonDisponibleExeption;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
   
-  public static void main(String... args) {
+  public static void main(String... args) throws IOException, ClassNotFoundException {
     List<Livre> bibliotheque = new ArrayList<>();
+    // Livre lesFleursDuMal = new Livre("Les fleurs du mal", "Charles Baudelaire", "1", Categorie.HISTOIRE);
+    // bibliotheque.add(lesFleursDuMal);
 
-    Livre lesFleursDuMal = new Livre("Les fleurs du mal", "Charles Baudelaire", "1", Categorie.HISTOIRE);
-    bibliotheque.add(lesFleursDuMal);
-    
+    File bibliothequeFile = new File("C:/Users/cleme/bibliotheque/bibliotheque.txt");
+    bibliothequeFile.createNewFile();
+    FileInputStream fis = new FileInputStream(bibliothequeFile);
+    ObjectInputStream ois = new ObjectInputStream(fis);
+
+    bibliotheque = (List<Livre>) ois.readObject();
+
+    for (Livre livre : bibliotheque) {
+      System.out.println(livre.getTitre());
+    }
+
+    //
     app(bibliotheque);
+    //
+
+    FileOutputStream fos= new FileOutputStream(bibliothequeFile, false);
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+    oos.writeObject(bibliotheque);
   }
   
   public static Livre chercherLivre(List<Livre> bibliotheque, String titre) {
@@ -51,7 +69,7 @@ public class Main {
       System.out.println(e.getMessage());
     }
     finally {
-      app(bibliotheque);
+      // app(bibliotheque);
     }
   }
   
@@ -90,6 +108,5 @@ public class Main {
       case "emprunter":
         tacheEmprunt(bibliotheque);
     }
-    app(bibliotheque);
   }
 }
