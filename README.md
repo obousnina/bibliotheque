@@ -44,7 +44,7 @@ Implémentez cette interface dans la classe `Livre`.
 
 ### Enum
 
-Créez une énumération `Categorie` avec les valeurs suivantes :
+Créez une énumération `enums.Categorie` avec les valeurs suivantes :
 - FICTION
 - NON_FICTION
 - SCIENTIFIQUE
@@ -96,7 +96,7 @@ Créez une exception personnalisée `LivreNonDisponibleException` qui sera lanc�
     - Lisez chaque ligne du fichier avec `BufferedReader.readLine()` et créez des instances de `Livre` à partir des données lues.
     - Exemple:
       ```java
-      BufferedReader reader = new BufferedReader(new FileReader("catalogue.txt"));
+import enums.Categorie;       BufferedReader reader = new BufferedReader(new FileReader("catalogue.txt"));
       String line;
       List<Livre> listeLivres = new ArrayList<>();
       while ((line = reader.readLine()) != null) {
@@ -131,4 +131,20 @@ Créez une exception personnalisée `LivreNonDisponibleException` qui sera lanc�
       ```
     - Mettez à jour le fichier `catalogue.txt` pour refléter les changements dans la disponibilité des livres en répétant l'étape de création du fichier.
 
+    
+4. **Intégration avec Spring Boot et une base de données H2**:
+    - **Configuration de Spring Boot**:
+        - Créez un projet Spring Boot en utilisant Maven.
+        - Ajoutez les dépendances nécessaires dans le fichier `pom.xml` pour Spring Web, Spring Data JPA, et H2 Database.
+    - **Modèle de données**:
+        - Créez des entités JPA pour `Livre`, `Membre`, `Etudiant`, et `Professeur`(attention à l'heritage).
+    - **Repository**:
+        - Créez des interfaces de repository en étendant `JpaRepository` pour accéder aux données (par exemple, `LivreRepository`, `MembreRepository`).
+    - **Service**:
+        - Créez des classes de service pour encapsuler la logique métier (par exemple, `LivreService`, `MembreService`).
+    - **Contrôleur**:
+        - Créez des contrôleurs REST pour exposer des API permettant de gérer les livres et les membres (par exemple, `LivreController`, `MembreController`).
+    - **Base de données H2**:
+        - Configurez la base de données H2 dans le fichier `application.properties`.
+        - (bonus) Initialisez la base de données avec des données de test en utilisant un fichier `data.sql`.
 
