@@ -134,7 +134,7 @@ import enums.Categorie;       BufferedReader reader = new BufferedReader(new Fil
     
 4. **Intégration avec Spring Boot et une base de données H2**:
     - **Configuration de Spring Boot**:
-        - Créez un projet Spring Boot en utilisant Maven.
+        - Créez un projet Spring Boot en utilisant Maven dans https://github.com/obousnina/bibliothequeSpring.
         - Ajoutez les dépendances nécessaires dans le fichier `pom.xml` pour Spring Web, Spring Data JPA, et H2 Database.
     - **Modèle de données**:
         - Créez des entités JPA pour `Livre`, `Membre`, `Etudiant`, et `Professeur`(attention à l'heritage).
