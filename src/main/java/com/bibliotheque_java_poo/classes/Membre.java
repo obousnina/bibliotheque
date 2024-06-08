@@ -1,4 +1,4 @@
-package classes;
+package com.bibliotheque_java_poo.classes;
 
 public class Membre {
     public String nom;

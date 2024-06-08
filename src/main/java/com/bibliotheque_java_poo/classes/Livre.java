@@ -1,6 +1,6 @@
-package classes;
-import interfaces.Empruntable;
-import exceptions.LivreNonDisponibleException;
+package com.bibliotheque_java_poo.classes;
+import com.bibliotheque_java_poo.exceptions.LivreNonDisponibleException;
+import com.bibliotheque_java_poo.interfaces.Empruntable;
 
 public class Livre implements Empruntable {
     private String titre;
