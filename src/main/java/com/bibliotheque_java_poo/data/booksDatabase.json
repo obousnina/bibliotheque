@@ -2,273 +2,273 @@
     {
         "titre": "Le Secret du Temps",
         "auteur": "Jean Dupont",
-        "idLivre": 1,
+        "idBook": 1,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "L'Univers et ses Mystères",
         "auteur": "Marie Curie",
-        "idLivre": 2,
+        "idBook": 2,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Grandes Découvertes",
         "auteur": "Pierre Martin",
-        "idLivre": 3,
+        "idBook": 3,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Léonard de Vinci",
         "auteur": "Sophie Bernard",
-        "idLivre": 4,
+        "idBook": 4,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "L'Art de la Guerre",
         "auteur": "Sun Tzu",
-        "idLivre": 5,
+        "idBook": 5,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "L'Aventure Spatiale",
         "auteur": "Nicolas Petit",
-        "idLivre": 6,
+        "idBook": 6,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "Les Énigmes du Cerveau",
         "auteur": "Dr. Emile Roch",
-        "idLivre": 7,
+        "idBook": 7,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Guerres Mondiales",
         "auteur": "Henri Durand",
-        "idLivre": 8,
+        "idBook": 8,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie d'Einstein",
         "auteur": "Albert Brochet",
-        "idLivre": 9,
+        "idBook": 9,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "Les Secrets de la Méditation",
         "auteur": "Lama Tsultrim",
-        "idLivre": 10,
+        "idBook": 10,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Chroniques du Futur",
         "auteur": "Alexandre Beaumont",
-        "idLivre": 11,
+        "idBook": 11,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "La Science des Étoiles",
         "auteur": "Catherine Soleil",
-        "idLivre": 12,
+        "idBook": 12,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Empires Perdus",
         "auteur": "George Lefèvre",
-        "idLivre": 13,
+        "idBook": 13,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Steve Jobs",
         "auteur": "Paul Apple",
-        "idLivre": 14,
+        "idBook": 14,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "L'Art de la Négociation",
         "auteur": "Roger Fisher",
-        "idLivre": 15,
+        "idBook": 15,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Voyageurs du Temps",
         "auteur": "Elisabeth Berger",
-        "idLivre": 16,
+        "idBook": 16,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "Les Mystères de l'ADN",
         "auteur": "Dr. Valérie Morin",
-        "idLivre": 17,
+        "idBook": 17,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Révolutions Industrielles",
         "auteur": "Jacques Lambert",
-        "idLivre": 18,
+        "idBook": 18,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Nelson Mandela",
         "auteur": "Clara Williamson",
-        "idLivre": 19,
+        "idBook": 19,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "Le Pouvoir de l'Intuition",
         "auteur": "Daniel Goleman",
-        "idLivre": 20,
+        "idBook": 20,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Légendes de l'Univers",
         "auteur": "Thierry Dubois",
-        "idLivre": 21,
+        "idBook": 21,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "Les Origines de la Vie",
         "auteur": "Dr. Sophie Lefranc",
-        "idLivre": 22,
+        "idBook": 22,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Grandes Civilisations",
         "auteur": "Michel Brun",
-        "idLivre": 23,
+        "idBook": 23,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Marie Curie",
         "auteur": "Françoise Dupuis",
-        "idLivre": 24,
+        "idBook": 24,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "Les Secrets de la Communication",
         "auteur": "John Maxwell",
-        "idLivre": 25,
+        "idBook": 25,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Aventures de l'Espace",
         "auteur": "Hélène Martin",
-        "idLivre": 26,
+        "idBook": 26,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "Les Fondements de la Physique",
         "auteur": "Dr. Marc Pelletier",
-        "idLivre": 27,
+        "idBook": 27,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Conquêtes Romaines",
         "auteur": "André Leclerc",
-        "idLivre": 28,
+        "idBook": 28,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Martin Luther King",
         "auteur": "David King",
-        "idLivre": 29,
+        "idBook": 29,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "Les Clés du Succès",
         "auteur": "Napoleon Hill",
-        "idLivre": 30,
+        "idBook": 30,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Fantômes du Passé",
         "auteur": "Julie Dumas",
-        "idLivre": 31,
+        "idBook": 31,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "Les Secrets de l'Univers",
         "auteur": "Dr. Jean Roux",
-        "idLivre": 32,
+        "idBook": 32,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Batailles Napoléoniennes",
         "auteur": "Louis Moreau",
-        "idLivre": 33,
+        "idBook": 33,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Gandhi",
         "auteur": "Anil Kapoor",
-        "idLivre": 34,
+        "idBook": 34,
         "categorie": "BIOGRAPHIE",
         "disponible": true
     },
     {
         "titre": "La Psychologie Positive",
         "auteur": "Martin Seligman",
-        "idLivre": 35,
+        "idBook": 35,
         "categorie": "NON_FICTION",
         "disponible": true
     },
     {
         "titre": "Les Royaumes Oubliés",
         "auteur": "Chloé Fournier",
-        "idLivre": 36,
+        "idBook": 36,
         "categorie": "FICTION",
         "disponible": true
     },
     {
         "titre": "La Biologie Humaine",
         "auteur": "Dr. Claire Dubois",
-        "idLivre": 37,
+        "idBook": 37,
         "categorie": "SCIENTIFIQUE",
         "disponible": true
     },
     {
         "titre": "Les Dynasties Chinoises",
         "auteur": "Zhang Wei",
-        "idLivre": 38,
+        "idBook": 38,
         "categorie": "HISTOIRE",
         "disponible": true
     },
     {
         "titre": "La Vie de Marie-Antoinette",
         "auteur": "Anne Delcourt",
-        "idLivre": 39,
+        "idBook": 39,
         "categorie": "BIOGRAPHIE"
     }
 ]
