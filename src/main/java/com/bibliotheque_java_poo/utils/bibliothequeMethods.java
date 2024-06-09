@@ -4,7 +4,11 @@ import java.io.File;
 public class bibliothequeMethods {
     public static String returnParentPackagePath(String fromThisPathPosition) {
 
-        File currentPackagePath = new File(fromThisPathPosition);
-        return currentPackagePath.getAbsolutePath();
+       File currentPackagePath = new File(fromThisPathPosition);
+       String packagePathString = currentPackagePath.getPath();
+       String parentPackageAbsolutPath = packagePathString.substring(0, packagePathString.length() - fromThisPathPosition.length());
+       return parentPackageAbsolutPath;
+
+
     }
 }
